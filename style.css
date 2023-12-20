@@ -20,7 +20,7 @@ body {
 
 .quote-container {
     width: auto;
-    max-width: 900px;
+    max-width: 800px;
     padding: 20px 30px;
     border-radius: 10px;
     background-color: rgba(183, 1, 238, 0.4);
@@ -39,3 +39,9 @@ body {
     font-size: 4rem;
 }
 
+.quote-author {
+    margin-top: 15px;
+    font-size: 2rem;
+    font-weight: 400;
+    font-style: italic;
+}
