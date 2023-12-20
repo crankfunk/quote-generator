@@ -44,7 +44,7 @@ function newQuote() {
 }
 
 // Get Quotes-Array from API
-async function getQuotes() {
+async function getQuotes(retries = 3) {
     loading();
     const apiUrl = 'https://jacintodesign.github.io/quotes-api/data/quotes.json';
     try {
@@ -52,7 +52,11 @@ async function getQuotes() {
         apiQuotes = await response.json();
         newQuote();
     } catch (error) {
-        // Catch Error Here
+        if (retries > 0) {
+            return getQuotes(retries - 1);
+        }
+        console.error("Failed to fetch quotes: ", error);
+        alert('Failed to fetch quotes. Please try again later.');
     }
 }
 
