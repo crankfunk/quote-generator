@@ -74,6 +74,14 @@ button:active {
     box-shadow: 0 0.05rem rgba(121, 121, 121, 0.95);
 }
 
+.x-button:hover {
+    color: #000000;
+}
+
+.fa-x-twitter {
+    font-size: 1.5rem;
+}
+
 /* Media Query: Tablet or Smaller */
 @media screen and (max-width: 1000px) {
     .quote-container {
