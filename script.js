@@ -1,10 +1,17 @@
+const quoteContainer = document.getElementById('quote-container');
+const quoteText = document.getElementById('quote');
+const authorText = document.getElementById('author');
+const xBtn = document.getElementById('x');
+const newQuoteBtn = document.getElementById('new-quote');
+
 let apiQuotes = [];
 
 // Pick New Quote from apiQuotes Array
 function newQuote() {
     // Pick a random quote from apiQuotes array
     const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
-    console.log(quote);
+    authorText.textContent = quote.author;
+    quoteText.textContent = quote.text;
 }
 
 // Get Quotes-Array from API
